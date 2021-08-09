@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "ES6",
+    "lib": ["esnext"],
+    "declaration": true,
+    "removeComments": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src"]
+}

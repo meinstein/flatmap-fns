@@ -1,0 +1,48 @@
+{
+  "name": "flatmap-fns",
+  "version": "0.0.0",
+  "description": "Functional utils for your flat mapping needs.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "jest",
+    "tsc": "tsc",
+    "build": "run-s clean tsc copy:package copy:readme",
+    "lint": "eslint 'src/**/*.ts'",
+    "copy:package": "cp -rf package.json dist",
+    "copy:readme": "cp -rf README.md dist",
+    "dist": "cd dist && npm publish"
+  },
+  "keywords": [
+    "flatmap",
+    "utils",
+    "functional",
+    "typescript"
+  ],
+  "author": "Maximillian Einstein",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "jest": "^27.0.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meinstein/flatmap-fns.git"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  }
+}
