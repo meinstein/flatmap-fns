@@ -4,10 +4,10 @@ export const sum = (): FlatMap<number> => {
   let accumulator = 0
 
   return (currentValue, currentIndex, array) => {
-    const isLastItem = currentIndex === array.length - 1
+    const isEnd = currentIndex === array.length - 1
     accumulator = accumulator + currentValue
     // return accumulator only on last index
-    return isLastItem ? [accumulator] : []
+    return isEnd ? [accumulator] : []
   }
 }
 

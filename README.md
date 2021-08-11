@@ -78,6 +78,18 @@ const resB = [1, 2, 3, 4, 5].flatMap(resize(3))
 console.log(resB) // [1, 2, 3]
 ```
 
+### _rotate_
+
+```js
+import rotate from 'flatmap-fns/rotate'
+
+const resA = [1, 2, 3].flatMap(rotate())
+console.log(resA) // [3, 1, 2] - default is to rotate right by one step.
+
+const resB = [1, 2, 3].flatMap(rotate({ direction: 'left', steps: 2 }))
+console.log(resB) // [3, 1, 2]
+```
+
 ### _shuffle_
 
 ```js
