@@ -12,16 +12,17 @@ export const rotate = <T>(args?: RotateArgs): FlatMap<T> => {
       rotatedArray = [...array]
     }
 
-    const isEnd = currentIndex === array.length - 1
-
+    const len = array.length
+    const end = currentIndex === len - 1
     const steps = args?.steps ?? 1
     const direction: Direction = args?.direction || 'right'
 
     if (direction === 'left') {
       let newIndex = currentIndex - steps
+
       if (newIndex < 0) {
-        newIndex = Math.abs(newIndex) % array.length
-        newIndex = array.length - newIndex
+        newIndex = Math.abs(newIndex) % len
+        newIndex = len - newIndex
       }
 
       rotatedArray[newIndex] = value
@@ -29,14 +30,15 @@ export const rotate = <T>(args?: RotateArgs): FlatMap<T> => {
 
     if (direction === 'right') {
       let newIndex = currentIndex + steps
-      if (newIndex >= array.length) {
-        newIndex = newIndex % array.length
+
+      if (newIndex >= len) {
+        newIndex = newIndex % len
       }
 
       rotatedArray[newIndex] = value
     }
 
-    return isEnd ? rotatedArray : []
+    return end ? rotatedArray : []
   }
 }
 
