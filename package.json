@@ -1,6 +1,6 @@
 {
   "name": "flatmap-fns",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Functional utils for your flat mapping needs.",
   "main": "index.js",
   "scripts": {
